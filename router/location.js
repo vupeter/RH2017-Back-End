@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-const profile = require('./profile');
 
 router.use('/:id/profile', (req,res)=>{
     //call user request end points
