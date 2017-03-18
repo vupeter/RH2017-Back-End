@@ -8,9 +8,9 @@ module.exports = {
         //Declare new express app
         let app = express();
         //Body parse middleware
+        app.use(cors({origin: '*'}));
         app.use(bodyParser.json());
-        app.use(bodyParser.urlencoded({extended:true}));
-        app.use(cors());
+        app.use(bodyParser.urlencoded({extended:false}));
 
         //load all our routes
         app.use(require('./router'));
