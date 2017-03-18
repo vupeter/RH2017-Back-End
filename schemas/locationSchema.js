@@ -4,16 +4,7 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 var locationSchema = new  mongoose.Schema({
-  id: {
-      type: String,
-      required: true,
-      index: true
-  },
-  name: {
-      type: String,
-      required: true
-  },
-  activity:{
+  ownerID: {
       type: String,
       required: true
   },
@@ -25,14 +16,20 @@ var locationSchema = new  mongoose.Schema({
       type: number,
       required: true
   },
-  eventExists:{ //so we know if it should be made
-      type: Boolean,
-      default: false,
-      index: true
+  price:{
+      type:Number,
+      required: true
   },
-  totalConfirmed: { // total times people actually went to this place
+  capacity:{
       type: Number,
-      default: 0
+      default: 1
+  },
+  availability:{
+      type:[{start: Number, end: Number}]
+  },
+  bookings:{
+      type:{},
+      default: {}
   }
 });
 

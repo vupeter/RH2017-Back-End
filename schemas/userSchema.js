@@ -4,6 +4,10 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 var userSchema = new  mongoose.Schema({
+  owner:{
+    type: Boolean,
+    required: true
+  },
   name: {
       type: String,
       required: true
@@ -12,26 +16,24 @@ var userSchema = new  mongoose.Schema({
       type: String,
       required: true
   },
-  location: {
-      type: {
-          latitude: Number,
-          longitude: Number
-      }
-  },
   description:{
     type: String,
     required: true
   },
-  interests:{
-      type: {},
+  ratings:{
+      type: [],
+      default: []
+  },
+  contact: {
+      type: {
+        email: String,
+        phone: String,
+        address: String,
+      },
       required: true
   },
-  eventInterests:{
-      type: {},
-      required: true
-  },
-  matches : {
-      type: {id: String, confirmed: Boolean }
+  orders:{
+      type: {}
   }
 });
 

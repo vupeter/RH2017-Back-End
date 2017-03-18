@@ -4,7 +4,7 @@ const router = express.Router();
 
 //Declare further routes here
 router.use('/user', require('./user'));
-router.use('/event', require('./event'));
+router.use('/location', require('./location'));
 
 
 module.exports = router
