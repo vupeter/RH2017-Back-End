@@ -4,11 +4,15 @@ const router = express.Router();
 
 const Location = require('../structures/location');
 
-router.use('/create/:data',async (req,res)=>{
+router.use('/test',(req,res)=>{
+    res.json({test:"Success"});
+})
+
+router.post('/create',async (req,res)=>{
     //call location request end points
     let location = new Location();
     console.log(req.body);
-    await location.create(JSON.parse(req.params.data));
+    await location.create(req.body);
     
     //return id to phone so it knows whats the id
     res.json(location.id);
