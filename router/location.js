@@ -4,7 +4,7 @@ const router = express.Router();
 
 const Location = require('../structures/location');
 
-router.get('/test',(req,res)=>{
+router.use('/test',(req,res)=>{
     res.json({test:"Success"});
 })
 
@@ -18,7 +18,7 @@ router.post('/create',async (req,res)=>{
     res.json(location.id);
 })
 
-router.get('/:id', async (req,res)=>{
+router.use('/:id', async (req,res)=>{
     //call user request end points
     let id = req.params.id;
     let location = new Location();
