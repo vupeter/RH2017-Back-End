@@ -1,6 +1,7 @@
 //require express API manager
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 module.exports = {
     init: function(){
@@ -9,6 +10,8 @@ module.exports = {
         //Body parse middleware
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({extended:true}));
+        app.use(cors());
+
         //load all our routes
         app.use(require('./router'));
 
