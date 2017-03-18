@@ -8,6 +8,7 @@ const User = require('../structures/user');
 router.post('/create',async (req,res)=>{
     //call user request end points
     let user = new User();
+    console.log(req.body);
     await user.create(req.body);
     
     //return id to phone so it knows whats the id
