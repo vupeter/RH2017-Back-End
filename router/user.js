@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-const User = require('../../structures/user');
+const User = require('../structures/user');
 
 
 router.post('/create',async (req,res)=>{
