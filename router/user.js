@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-const profile = require('./profile');
 const User = require('../../structures/user');
 
 
