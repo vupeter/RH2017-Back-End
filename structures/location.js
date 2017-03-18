@@ -43,7 +43,12 @@ class Location {
             });
         })
     }
-
+	
+	addBooking(userID){
+		return new Promise(resolve=>{
+			locationSchema.findOne({_id: this.id}).exec().then(async location=>{
+				this.bookings.push(userID);
+				locationSchema.update({_id: this.id}, this, {upsert: true}, function(err, doc){resolve()});
+				})})}
 }
-
 module.exports = Location;
