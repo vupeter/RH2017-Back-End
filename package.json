@@ -19,6 +19,7 @@
   "homepage": "https://github.com/vupeter/RH2017-Back-End#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.9.0",
+    "yelp-fusion": "^1.0.3"
   }
 }

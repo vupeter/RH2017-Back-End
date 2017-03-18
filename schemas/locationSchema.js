@@ -4,6 +4,11 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 var locationSchema = new  mongoose.Schema({
+  id: {
+      type: String,
+      required: true,
+      index: true
+  },
   name: {
       type: String,
       required: true
