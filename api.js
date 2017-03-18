@@ -10,7 +10,7 @@ module.exports = {
         //Body parse middleware
         app.use(cors({origin: '*'}));
         app.use(bodyParser.json());
-        app.use(bodyParser.urlencoded({extended:false}));
+        app.use(bodyParser.urlencoded({extended:true}));
 
         //load all our routes
         app.use(require('./router'));
