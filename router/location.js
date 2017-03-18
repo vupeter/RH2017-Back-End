@@ -21,7 +21,6 @@ router.post('/create',async (req,res)=>{
 router.use('/:id', async (req,res)=>{
     //call user request end points
     let id = req.params.id;
-    console.log(id)
     let location = new Location();
 	await location.pull();
 	

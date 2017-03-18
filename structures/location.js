@@ -12,7 +12,7 @@ class Location {
     pull(){
         return new Promise(resolve=>{
             locationSchema.findOne({_id: this.id}).exec().then(location=>{
-                console.log('find ran')
+                console.log(location);
                 this.id = location._id
                 this.ownerID = location.ownerID;
                 this.address = location.address;
