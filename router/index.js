@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 //Declare further routes here
-router.use('/user', require('./user'));
-router.use('/location', require('./location'));
+router.use('/api/ru/user', require('./user'));
+router.use('/api/ru/location', require('./location'));
 
 
 module.exports = router
