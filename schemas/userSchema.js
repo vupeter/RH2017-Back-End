@@ -1,6 +1,5 @@
 //MongoDB schema declation
 let mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
 
 let Schema = mongoose.Schema;
 

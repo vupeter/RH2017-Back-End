@@ -8,26 +8,6 @@ class User {
     constructor(id) {
         if(id) this.id = id;
     }
-/*
-    get id(){
-        return this._id;
-    }
-    get name(){
-        return;
-    }
-    get avatarURL(){
-        return;
-    }
-    get description(){
-        return;
-    }
-    get interests(){
-        return;
-    }
-    get eventInterests(){
-        return this.eventInterests;
-    }
-    */
 
     pull(){
         return new Promise(resolve=>{

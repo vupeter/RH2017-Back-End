@@ -1,6 +1,5 @@
 //Require MongoDB MiddleWare
 let mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
 
 module.exports = {
     
