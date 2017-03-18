@@ -13,7 +13,7 @@ var locationSchema = new  mongoose.Schema({
       required: true,
   },
   rating:{
-      type: number,
+      type: Number,
       required: true
   },
   price:{
