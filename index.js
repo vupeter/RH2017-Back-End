@@ -7,4 +7,4 @@ const database = require('./database');
 database.connect().then( ()=>{
     api.init();
   }
-)
+).catch(reason=>{console.log(reason)});

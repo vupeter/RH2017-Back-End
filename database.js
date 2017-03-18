@@ -1,5 +1,6 @@
 //Require MongoDB MiddleWare
-const mongoose = require('mongoose');
+let mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 
 module.exports = {
     
@@ -7,7 +8,7 @@ module.exports = {
     connect: function(){
         return new Promise(resolve=>{
             //Connect to DB, change DB location when we get there
-            mongoose.connect('mongodb://localhost/match');
+            mongoose.connect('mongodb://localhost/test');
 
             //Wait for DB to connect
             var db = mongoose.connection;

@@ -1,14 +1,16 @@
 //MongoDB schema declation
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 
-var user = new  mongoose.Schema({
+let Schema = mongoose.Schema;
+
+var userSchema = new  mongoose.Schema({
   name: {
       type: String,
       required: true
   },
   avatarURL:{
-      type: string,
+      type: String,
       required: true
   },
   description:{
@@ -22,7 +24,10 @@ var user = new  mongoose.Schema({
   eventInterests:{
       type: {},
       required: true
+  },
+  matches : {
+      type: {id: String, confirmed: Boolean }
   }
 });
 
-module.exports = mongoose.model('user',user);
+module.exports = mongoose.model('userSchema',userSchema);
