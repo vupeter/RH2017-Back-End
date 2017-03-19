@@ -33,7 +33,7 @@ var userSchema = new  mongoose.Schema({
       required: true
   },
   orders:{
-      type: {}
+      type: {},
 	  default: {}
   }
 });
