@@ -50,7 +50,7 @@ class Location {
 			if (!this.bookings[userID]) {
 				this.bookings[userID] = [];
 			}
-			this.bookings[userID].push({cost:duration*location.price, duration:duration, start:date});
+			this.bookings[userID].push({cost:duration*this.price, duration:duration, start:date});
 			console.log('here3')
 			locationSchema.update({_id: this.id}, this, {upsert: true}, function(err, doc){resolve()});
 			console.log('here4')
