@@ -15,6 +15,14 @@ router.post('/create',async (req,res)=>{
     res.json(user.id);
 })
 
+router.use('/:id/book/:location/:duration/:date' async (req, res)=>{
+	let id = req.params.id;
+	let user = new User(id);
+	await user.addLocation(req.params.location, req.params.duration, req.params.date);
+	let location = req.params.location;
+	await location.addBooking(id);
+})
+
 router.use('/:id', async (req,res)=>{
     //call user request end points
     let id = req.params.id;
