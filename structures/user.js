@@ -49,7 +49,8 @@ class User {
 				let location = new Location(locationID);
 				await location.pull();
 				this.orders = user.orders;
-				console.log('hi '+duration+date);					
+				console.log('hi '+duration+date);	
+				console.log(this);
 				this.orders[locationID]={cost:duration*location.price, duration:duration, start:date};
 				console.log(123);
 				userSchema.update({_id: this.id}, this ,function(err, doc){
