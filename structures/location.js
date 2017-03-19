@@ -47,8 +47,8 @@ class Location {
 	addBooking(userID, duration, date){
 		return new Promise(resolve=>{
 			console.log('here2')
-			if (!bookings[userID]) {
-				this.bookings[userID] = []
+			if (!this.bookings[userID]) {
+				this.bookings[userID] = [];
 			}
 			this.bookings[userID].push({cost:duration*location.price, duration:duration, start:date});
 			console.log('here3')
