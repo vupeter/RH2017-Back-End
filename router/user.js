@@ -15,7 +15,7 @@ router.post('/create',async (req,res)=>{
     res.json(user.id);
 })
 
-router.use('/:id/book/:location/:duration/:date' async (req, res)=>{
+router.use('/:id/book/:location/:duration/:date', async (req, res)=>{
 	let id = req.params.id;
 	let user = new User(id);
 	await user.addLocation(req.params.location, req.params.duration, req.params.date);
