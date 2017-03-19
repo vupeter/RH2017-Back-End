@@ -16,11 +16,14 @@ router.post('/create',async (req,res)=>{
 })
 
 router.use('/:id/book/:location/:duration/:date', async (req, res)=>{
+	console.log('started insert');
 	let id = req.params.id;
 	let user = new User(id);
 	await user.addLocation(req.params.location, req.params.duration, req.params.date);
+	console.log('added location to user');
 	let location = req.params.location;
 	await location.addBooking(id);
+	console.log('added booking');
 })
 
 router.use('/:id', async (req,res)=>{
