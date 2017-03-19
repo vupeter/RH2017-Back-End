@@ -51,6 +51,6 @@ class Location {
 			console.log('here3')
 			locationSchema.update({_id: this.id}, this, {upsert: true}, function(err, doc){resolve()});
 			console.log('here4')
-			})})}
+			})}
 }
 module.exports = Location;
