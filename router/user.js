@@ -21,12 +21,10 @@ router.use('/:id/book/:location/:duration/:date', async (req, res)=>{
 	let id = req.params.id;
 	let user = new User(id);
 	await user.addLocation(req.params.location, req.params.duration, req.params.date);
-	console.log('added location to user');
 	let location = new Location(req.params.location);
-	console.log('here')
 	await location.pull();
-	await location.addBooking(id);
-	console.log('added booking');
+	await location.addBooking(id, req.params.duration, req.params.date);
+	res.json('complete')
 })
 
 router.use('/:id', async (req,res)=>{
@@ -34,7 +32,6 @@ router.use('/:id', async (req,res)=>{
     let id = req.params.id;
     let user = new User(id);
     await user.pull();
-	console.log('got uesr');
     res.json(user);
 })
 
