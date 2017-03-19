@@ -5,7 +5,7 @@ const router = express.Router();
 const Location = require('../structures/location');
 
 router.use('/all',(req,res)=>{
-    require('../schemas/location').find({},function(err,locations){
+    require('../schemas/locationSchema').find({},function(err,locations){
         if(!err && locations) res.json(locations);
     })
 })
