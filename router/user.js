@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
+const Location = require('../structures/location');
 const User = require('../structures/user');
 
 
