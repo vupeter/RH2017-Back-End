@@ -34,6 +34,7 @@ var userSchema = new  mongoose.Schema({
   },
   orders:{
       type: {}
+	  default: {}
   }
 });
 
