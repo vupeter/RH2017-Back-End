@@ -43,7 +43,7 @@ class Location {
             });
         })
     }
-	
+
 	addBooking(userID, duration, date){
 		return new Promise(resolve=>{
 			if (!this.bookings[userID]) {
