@@ -23,6 +23,8 @@ router.use('/:id/book/:location/:duration/:date', async (req, res)=>{
 	await user.addLocation(req.params.location, req.params.duration, req.params.date);
 	console.log('added location to user');
 	let location = new Location(req.params.location);
+	console.log('here')
+	await location.pull();
 	await location.addBooking(id);
 	console.log('added booking');
 })
