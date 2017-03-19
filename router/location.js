@@ -21,7 +21,7 @@ router.post('/create',async (req,res)=>{
 router.use('/:id', async (req,res)=>{
     //call user request end points
     let id = req.params.id;
-    let location = new Location();
+    let location = new Location(id);
 	await location.pull();
 	
 	res.json(location);
