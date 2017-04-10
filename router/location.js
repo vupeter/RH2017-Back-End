@@ -4,8 +4,10 @@ const router = express.Router();
 
 const Location = require('../structures/location');
 
-router.use('/test',(req,res)=>{
-    res.json({test:"Success"});
+router.use('/all',(req,res)=>{
+    require('../schemas/locationSchema').find({},function(err,locations){
+        if(!err && locations) res.json(locations);
+    })
 })
 
 router.post('/create',async (req,res)=>{
