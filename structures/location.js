@@ -33,6 +33,9 @@ class Location {
                 if(err)console.log(err);
                 this.id = location._id
                 this.ownerID = location.ownerID;
+                this.name = location.name;
+                this.description = location.description;
+                this.avatarURL = location.avatarURL;
                 this.address = location.address;
 				this.rating = location.rating;
 				this.price = location.price;

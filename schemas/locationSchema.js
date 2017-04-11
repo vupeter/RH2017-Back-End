@@ -30,7 +30,16 @@ var locationSchema = new  mongoose.Schema({
   bookings:{
       type:{},
       default: {}
-  }
+  },
+  name: {
+      type: String,
+  },
+  description: {
+      type: String,
+  },
+  avatarURL: {
+      type: String,
+  },
 });
 
 module.exports = mongoose.model('locationSchema',locationSchema);
