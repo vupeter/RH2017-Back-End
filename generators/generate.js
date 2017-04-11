@@ -123,7 +123,7 @@ const randomAddress = function randomAddress(){
 
 
 //Location generate
-const locationGenerate = function locationGenerate(){
+const locationGenerate = async function locationGenerate(){
 	for(let count = 0; count < 20; count++) {
 		let location = new Location();
 		let randomName = faker.name.findName();
