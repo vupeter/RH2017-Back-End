@@ -12,7 +12,9 @@ mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
             
 db.once('open', function() {
-    
+	console.log("MongoDB connected");
+    locationGenerate();
+	console.log('Location generate ran');
 });
 
 /* for(count = 0; count < 10; count++) {
