@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let Location = require('./schemas/locationSchema');
+let Location = require('../schemas/locationSchema');
 let User = require('./schemas/userSchema')
 
 mongoose.connect('mongodb://localhost/test');
